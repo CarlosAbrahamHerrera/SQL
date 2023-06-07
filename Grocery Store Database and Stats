@@ -1,4 +1,4 @@
---Create a grocery store database
+/*Create a grocery store database*/
 
 CREATE TABLE grocery_store (id INTEGER PRIMARY KEY, item TEXT, stock INTEGER, sold INTEGER, returns INTEGER, price INTEGER);
 
@@ -18,15 +18,15 @@ INSERT INTO grocery_store VALUES (13, "Computer", 100, 22, 1, 999.99);
 INSERT INTO grocery_store VALUES (14, "Gucci", 100, 24, 1, 2500.99);
 INSERT INTO grocery_store VALUES (15, "Prada", 100, 26, 1, 2000.99);
 
---Display the average price of items
+/*Display the average price of items*/
 SELECT AVG(price) AS "Average Price" 
 FROM grocery_store;
 
---Display a table of "Cheapest To Most Expensive" grouped by price
+/*Display a table of "Cheapest To Most Expensive" grouped by price*/
 SELECT item AS "Cheapest To Expensive List" 
 FROM grocery_store 
 GROUP BY price;
 
---Display the "Retail Value" of the store.
+/*Display the "Retail Value" of the store*/
 SELECT SUM(price*stock) AS "Retail Value" 
 From grocery_store;
